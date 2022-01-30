@@ -1,0 +1,23 @@
+projet 5
+
+on veut générer un image grace à buildrood sur linux
+pour celà, on installe ubuntu en suite le système QEMU
+ -sudo apt-get install qemu-system-arm
+ -sudo apt-get install libncurses5-dev bc​
+ -sudo apt install build-essential​
+ -sudo apt-get install manpages-dev unzip
+ -sudo apt-get upgrade 
+ -sudo apt-get update
+ -git clone https://github.com/buildroot/buildroot.git
+une fois ceci fait, on fait une copie du dossier buildroot se trouvant sur n
+notre repertoire
+ -cp -R buildrootbuildroot-qemu-rpi3
+ on se place dans ce dossier
+  -cd buildroot-qemu-rpi
+  -make raspberrypi_defconfig
+on fait les configuration avec la commande
+ -make menuconfig
+enfin on lance la création d'image avec la commande 
+ -make
+
+
